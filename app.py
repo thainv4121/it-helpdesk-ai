@@ -77,8 +77,7 @@ st.markdown("""
 <div style="background:rgba(234,179,8,0.15); border:1px solid rgba(234,179,8,0.4); 
 border-radius:8px; padding:6px 10px; font-size:11px; 
 color:#fcd34d; line-height:1.4;">
-⚠️ LƯU Ý: Các thông tin được cung cấp bởi AI mang tính tham khảo.
-Chúng tôi không chịu trách nhiệm về bất kỳ sự cố nào phát sinh.
+⚠️ LƯU Ý: Các thông tin được cung cấp bởi AI mang tính tham khảo. Vui lòng liên hệ với chúng tôi để được hỗ trợ tốt nhất.
 </div>
 """, unsafe_allow_html=True)
 
