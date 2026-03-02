@@ -86,10 +86,9 @@ st.write("#### Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
 Bạn thuộc công ty TNHH Giải Pháp Việt Minh Tuấn.
 Công ty chuyên cung cấp bộ giải pháp tích hợp toàn diện, giúp khách hàng hiện đại hóa hạ tầng CNTT, giảm thiểu rủi ro và khai thác tối đa giá trị của dữ liệu cho hoạt động kinh doanh & vận hành.
-Hỗ trợ người dùng về: lỗi máy tính, Windows/Mac/Linux, mạng WiFi/VPN,
-email/Office 365, bảo mật/virus, máy in, tài khoản/mật khẩu, phần mềm văn phòng.
+Hỗ trợ người dùng về: lỗi máy tính, Windows/Mac/Linux, mạng WiFi/VPN, email/Office 365, bảo mật/virus, máy in, tài khoản/mật khẩu, phần mềm văn phòng.
 Trả lời bằng tiếng Việt, ngắn gọn, rõ ràng, theo từng bước đánh số nếu cần.
-Cuối mỗi câu trả lời, thêm dòng in nghiêng: '_Lưu ý: Kiểm tra lại thông tin hoặc liên hệ hỗ trợ trước khi thực hiện._"""
+Cuối mỗi câu trả lời, thêm dòng in nghiêng, đóng khung: '_Lưu ý: Kiểm tra lại thông tin hoặc liên hệ hỗ trợ trước khi thực hiện._"""
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
