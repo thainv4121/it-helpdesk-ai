@@ -11,77 +11,44 @@ st.markdown("""
     [data-testid="stToolbar"] {display: none;}
     [data-testid="stDecoration"] {display: none;}
 
-    .stApp {
-        background-color: #f8fafc !important;
+    /* Chữ tiêu đề nhỏ gọn */
+    .stApp h3, .stApp h4 {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 4px !important;
     }
 
-    .stApp, .stApp p, .stApp div, .stApp span, .stApp label {
-        color: #1e293b !important;
-    }
-
-    .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
-        color: #1e293b !important;
-    }
-
-    [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
-        background: white !important;
-        border-radius: 12px !important;
-        border: 1px solid #e2e8f0 !important;
-        padding: 8px !important;
-    }
-
-    [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
-        background: #eff6ff !important;
-        border-radius: 12px !important;
-        padding: 8px !important;
-    }
-
+    /* Chữ trong tin nhắn */
     [data-testid="stChatMessageContent"] p {
-        color: #1e293b !important;
         font-size: 13px !important;
+        line-height: 1.6 !important;
     }
 
-    [data-testid="stChatInput"] textarea {
-        background-color: white !important;
-        color: #1e293b !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 12px !important;
-    }
-
+    /* Input placeholder rõ hơn */
     [data-testid="stChatInput"] textarea::placeholder {
-        color: #94a3b8 !important;
+        font-size: 13px !important;
+        opacity: 0.6 !important;
     }
 
+    /* Nút gửi màu xanh */
     [data-testid="stChatInput"] button {
         background-color: #2563eb !important;
         border-radius: 8px !important;
     }
 
-    /* Vùng nền input phía dưới */
-    .stChatInput,
-    .stChatInput > div,
-    .stChatInput > div > div,
-    section[data-testid="stBottom"],
-    section[data-testid="stBottom"] > div,
-    section[data-testid="stBottom"] > div > div {
-        background-color: white !important;
-        background: white !important;
-    }
-
+    /* Disclaimer nhỏ gọn */
     .contact-box {
-        background: linear-gradient(135deg, #eff6ff, #dbeafe);
-        border: 1px solid #bfdbfe;
+        background: rgba(37,99,235,0.15) !important;
+        border: 1px solid rgba(37,99,235,0.3) !important;
         border-radius: 10px;
         padding: 10px 12px;
         margin-top: 6px;
         font-size: 12px;
-        color: #1e40af;
     }
     .contact-box p {
         margin: 0 0 8px 0 !important;
         font-weight: 600 !important;
         font-size: 12px !important;
-        color: #1e40af !important;
     }
     .contact-btn {
         display: inline-block;
@@ -107,8 +74,9 @@ CONTACT_HTML = f"""
 """
 
 st.markdown("""
-<div style="background:#fefce8; border:1px solid #fcd34d; border-radius:8px; 
-padding:6px 10px; font-size:11px; color:#92400e; line-height:1.4;">
+<div style="background:rgba(234,179,8,0.15); border:1px solid rgba(234,179,8,0.4); 
+border-radius:8px; padding:6px 10px; font-size:11px; 
+color:#fcd34d; line-height:1.4;">
 ⚠️ LƯU Ý: Các thông tin được cung cấp bởi AI mang tính tham khảo.
 Chúng tôi không chịu trách nhiệm về bất kỳ sự cố nào phát sinh.
 </div>
