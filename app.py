@@ -59,9 +59,26 @@ st.markdown("""
     color: #94a3b8 !important;
 }
 
-/* Vùng chứa input */
+/* Toàn bộ vùng input phía dưới - nền trắng */
 [data-testid="stBottom"] {
-    background-color: #f8fafc !important;
+    background-color: white !important;
+}
+
+/* Viền và nền input */
+[data-testid="stChatInput"] {
+    background-color: white !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    background-color: white !important;
+    color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* Nút gửi */
+[data-testid="stChatInput"] button {
+    background-color: #2563eb !important;
+    border-radius: 8px !important;
 }
 </style>
 """, unsafe_allow_html=True)
