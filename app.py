@@ -51,7 +51,6 @@ CONTACT_HTML = f"""
 </div>
 """
 
-st.title("🤖 VMT Helpdesk AI")
 st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
 
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
