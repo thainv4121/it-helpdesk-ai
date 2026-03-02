@@ -9,10 +9,6 @@ st.markdown("""
     header {visibility: hidden;}
     footer {visibility: hidden;}
     .block-container {padding-top: 2rem;}
-    .st-emotion-cache-15ecox0 {display: none !important;}
-    footer {visibility: hidden !important; height: 0 !important;}
-    .reportview-container .main footer {visibility: hidden !important;}
-    [data-testid="stBottom"] {display: none !important;}
 
     .contact-box {
         background: linear-gradient(135deg, #eff6ff, #dbeafe);
