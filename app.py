@@ -5,81 +5,94 @@ st.set_page_config(page_title="VMT Helpdesk AI", page_icon="🤖", layout="cente
 
 st.markdown("""
 <style>
-/* Nền app */
-.stApp {
-    background-color: #f8fafc !important;
-}
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    [data-testid="stToolbar"] {display: none;}
+    [data-testid="stDecoration"] {display: none;}
 
-/* Toàn bộ chữ trong app */
-.stApp, .stApp p, .stApp div, .stApp span, .stApp label {
-    color: #1e293b !important;
-}
+    .stApp {
+        background-color: #f8fafc !important;
+    }
 
-/* Tiêu đề h3/h4 */
-.stApp h1, .stApp h2, .stApp h3, .stApp h4 {
-    color: #1e293b !important;
-}
+    .stApp, .stApp p, .stApp div, .stApp span, .stApp label {
+        color: #1e293b !important;
+    }
 
-/* Vùng chat body */
-[data-testid="stChatMessageContainer"] {
-    background-color: #f8fafc !important;
-}
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+        color: #1e293b !important;
+    }
 
-/* Tin nhắn bot */
-[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
-    background: white !important;
-    border-radius: 12px !important;
-    border: 1px solid #e2e8f0 !important;
-    padding: 8px !important;
-}
+    [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
+        background: white !important;
+        border-radius: 12px !important;
+        border: 1px solid #e2e8f0 !important;
+        padding: 8px !important;
+    }
 
-/* Tin nhắn user */
-[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
-    background: #eff6ff !important;
-    border-radius: 12px !important;
-    padding: 8px !important;
-}
+    [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
+        background: #eff6ff !important;
+        border-radius: 12px !important;
+        padding: 8px !important;
+    }
 
-/* Chữ trong tin nhắn */
-[data-testid="stChatMessageContent"] p {
-    color: #1e293b !important;
-    font-size: 13px !important;
-}
+    [data-testid="stChatMessageContent"] p {
+        color: #1e293b !important;
+        font-size: 13px !important;
+    }
 
-/* Input chat */
-[data-testid="stChatInput"] textarea {
-    background-color: white !important;
-    color: #1e293b !important;
-    font-size: 13px !important;
-    border-radius: 12px !important;
-}
+    [data-testid="stChatInput"] textarea {
+        background-color: white !important;
+        color: #1e293b !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 12px !important;
+    }
 
-/* Placeholder input */
-[data-testid="stChatInput"] textarea::placeholder {
-    color: #94a3b8 !important;
-}
+    [data-testid="stChatInput"] textarea::placeholder {
+        color: #94a3b8 !important;
+    }
 
-/* Toàn bộ vùng input phía dưới - nền trắng */
-[data-testid="stBottom"] {
-    background-color: white !important;
-}
+    [data-testid="stChatInput"] button {
+        background-color: #2563eb !important;
+        border-radius: 8px !important;
+    }
 
-/* Viền và nền input */
-[data-testid="stChatInput"] {
-    background-color: white !important;
-}
+    /* Vùng nền input phía dưới */
+    .stChatInput,
+    .stChatInput > div,
+    .stChatInput > div > div,
+    section[data-testid="stBottom"],
+    section[data-testid="stBottom"] > div,
+    section[data-testid="stBottom"] > div > div {
+        background-color: white !important;
+        background: white !important;
+    }
 
-[data-testid="stChatInput"] textarea {
-    background-color: white !important;
-    color: #1e293b !important;
-    border: 1px solid #e2e8f0 !important;
-}
-
-/* Nút gửi */
-[data-testid="stChatInput"] button {
-    background-color: #2563eb !important;
-    border-radius: 8px !important;
-}
+    .contact-box {
+        background: linear-gradient(135deg, #eff6ff, #dbeafe);
+        border: 1px solid #bfdbfe;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-top: 6px;
+        font-size: 12px;
+        color: #1e40af;
+    }
+    .contact-box p {
+        margin: 0 0 8px 0 !important;
+        font-weight: 600 !important;
+        font-size: 12px !important;
+        color: #1e40af !important;
+    }
+    .contact-btn {
+        display: inline-block;
+        background: #2563eb;
+        color: white !important;
+        padding: 6px 14px;
+        border-radius: 8px;
+        text-decoration: none !important;
+        font-size: 12px;
+        font-weight: 600;
+    }
 </style>
 """, unsafe_allow_html=True)
 
