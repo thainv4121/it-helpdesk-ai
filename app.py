@@ -60,4 +60,3 @@ if prompt := st.chat_input("Nhập câu hỏi IT của bạn..."):
             st.markdown(answer)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
-```
