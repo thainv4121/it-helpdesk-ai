@@ -47,7 +47,6 @@ st.markdown("""
 
     /* Nền tin nhắn bot */
     [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
-        background: white !important;
         border-radius: 12px !important;
         border: 1px solid #e2e8f0 !important;
         padding: 8px !important;
