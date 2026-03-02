@@ -12,6 +12,11 @@ st.markdown("""
     [data-testid="stToolbar"] {display: none;}
     [data-testid="stDecoration"] {display: none;}
 
+    /* Nền trắng sáng */
+    .stApp {
+        background-color: #f8fafc;
+    }
+
     /* Khung chat */
     .block-container {
         padding: 1.2rem 1rem 0.5rem 1rem !important;
@@ -40,13 +45,20 @@ st.markdown("""
 
     /* Input chat */
     [data-testid="stChatInput"] textarea {
+        background-color: white !important;
+        color: #1e293b !important;
         font-size: 13px !important;
         border-radius: 12px !important;
-        background: white !important;
+    }
+
+    /* Vùng chứa input */
+    [data-testid="stBottom"] {
+        background-color: transparent !important;
     }
 
     /* Nền tin nhắn bot */
     [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
+        background: white !important;
         border-radius: 12px !important;
         border: 1px solid #e2e8f0 !important;
         padding: 8px !important;
