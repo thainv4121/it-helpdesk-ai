@@ -52,11 +52,17 @@ CONTACT_HTML = f"""
 """
 
 st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
+st.info("""
+⚠️ **Lưu ý:** Các thông tin được cung cấp bởi AI mang tính tham khảo. 
+Vui lòng kiểm tra lại trước khi thực hiện. 
+Chúng tôi không chịu trách nhiệm về bất kỳ sự cố nào phát sinh từ việc áp dụng thông tin này.
+""")
 
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
 Hỗ trợ người dùng về: lỗi máy tính, Windows/Mac/Linux, mạng WiFi/VPN,
 email/Office 365, bảo mật/virus, máy in, tài khoản/mật khẩu, phần mềm văn phòng.
-Trả lời bằng tiếng Việt, ngắn gọn, rõ ràng, theo từng bước đánh số nếu cần."""
+Trả lời bằng tiếng Việt, ngắn gọn, rõ ràng, theo từng bước đánh số nếu cần.
+Cuối mỗi câu trả lời, thêm dòng in nghiêng: '_Lưu ý: Kiểm tra lại thông tin hoặc liên hệ hỗ trợ trước khi thực hiện._"""
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
