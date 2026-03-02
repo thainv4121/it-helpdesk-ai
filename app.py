@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import Groq
 
-st.set_page_config(page_title="KMT Helpdesk AI", page_icon="🤖", layout="centered")
+st.set_page_config(page_title="VMT Helpdesk AI", page_icon="🤖", layout="centered")
 
 st.markdown("""
 <style>
@@ -51,7 +51,7 @@ CONTACT_HTML = f"""
 </div>
 """
 
-st.title("🤖 KMT Helpdesk AI")
+st.title("🤖 VMT Helpdesk AI")
 st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
 
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
