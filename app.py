@@ -4,101 +4,64 @@ from groq import Groq
 st.set_page_config(page_title="VMT Helpdesk AI", page_icon="🤖", layout="centered")
 
 st.markdown("""
-<style>
-    /* Ẩn các thành phần thừa */
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
-    [data-testid="stToolbar"] {display: none;}
-    [data-testid="stDecoration"] {display: none;}
+/* Nền app */
+.stApp {
+    background-color: #f8fafc !important;
+}
 
-    /* Nền trắng sáng */
-    .stApp {
-        background-color: #f8fafc;
-    }
+/* Toàn bộ chữ trong app */
+.stApp, .stApp p, .stApp div, .stApp span, .stApp label {
+    color: #1e293b !important;
+}
 
-    /* Khung chat */
-    .block-container {
-        padding: 1.2rem 1rem 0.5rem 1rem !important;
-        max-width: 100% !important;
-    }
+/* Tiêu đề h3/h4 */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+    color: #1e293b !important;
+}
 
-    /* Tiêu đề */
-    h1 {
-        font-size: 1.2rem !important;
-        color: #1e293b !important;
-        font-weight: 700 !important;
-        margin-bottom: 0 !important;
-    }
+/* Vùng chat body */
+[data-testid="stChatMessageContainer"] {
+    background-color: #f8fafc !important;
+}
 
-    /* Caption */
-    .stCaptionContainer p {
-        font-size: 12px !important;
-        color: #64748b !important;
-    }
+/* Tin nhắn bot */
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
+    background: white !important;
+    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 8px !important;
+}
 
-    /* Tin nhắn user */
-    [data-testid="stChatMessageContent"] {
-        font-size: 13px !important;
-        line-height: 1.55 !important;
-    }
+/* Tin nhắn user */
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
+    background: #eff6ff !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+}
 
-    /* Input chat */
-    [data-testid="stChatInput"] textarea {
-        background-color: white !important;
-        color: #1e293b !important;
-        font-size: 13px !important;
-        border-radius: 12px !important;
-    }
+/* Chữ trong tin nhắn */
+[data-testid="stChatMessageContent"] p {
+    color: #1e293b !important;
+    font-size: 13px !important;
+}
 
-    /* Vùng chứa input */
-    [data-testid="stBottom"] {
-        background-color: transparent !important;
-    }
+/* Input chat */
+[data-testid="stChatInput"] textarea {
+    background-color: white !important;
+    color: #1e293b !important;
+    font-size: 13px !important;
+    border-radius: 12px !important;
+}
 
-    /* Nền tin nhắn bot */
-    [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
-        background: white !important;
-        border-radius: 12px !important;
-        border: 1px solid #e2e8f0 !important;
-        padding: 8px !important;
-        margin-bottom: 4px !important;
-    }
+/* Placeholder input */
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #94a3b8 !important;
+}
 
-    /* Nền tin nhắn user */
-    [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
-        background: #eff6ff !important;
-        border-radius: 12px !important;
-        padding: 8px !important;
-        margin-bottom: 4px !important;
-    }
-
-    /* Disclaimer box */
-    .contact-box {
-        background: linear-gradient(135deg, #eff6ff, #dbeafe);
-        border: 1px solid #bfdbfe;
-        border-radius: 10px;
-        padding: 10px 12px;
-        margin-top: 6px;
-        font-size: 12px;
-        color: #1e40af;
-    }
-    .contact-box p {
-        margin: 0 0 8px 0 !important;
-        font-weight: 600 !important;
-        font-size: 12px !important;
-    }
-    .contact-btn {
-        display: inline-block;
-        background: #2563eb;
-        color: white !important;
-        padding: 6px 14px;
-        border-radius: 8px;
-        text-decoration: none !important;
-        font-size: 12px;
-        font-weight: 600;
-    }
-</style>
+/* Vùng chứa input */
+[data-testid="stBottom"] {
+    background-color: #f8fafc !important;
+}
 """, unsafe_allow_html=True)
 
 # ---- URL trang liên hệ----
