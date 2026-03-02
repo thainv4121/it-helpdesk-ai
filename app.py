@@ -4,6 +4,7 @@ from groq import Groq
 st.set_page_config(page_title="VMT Helpdesk AI", page_icon="🤖", layout="centered")
 
 st.markdown("""
+<style>
 /* Nền app */
 .stApp {
     background-color: #f8fafc !important;
@@ -62,6 +63,7 @@ st.markdown("""
 [data-testid="stBottom"] {
     background-color: #f8fafc !important;
 }
+</style>
 """, unsafe_allow_html=True)
 
 # ---- URL trang liên hệ----
