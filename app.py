@@ -61,10 +61,3 @@ if prompt := st.chat_input("Nhập câu hỏi IT của bạn..."):
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
 ```
-
----
-
-### File `requirements.txt`
-```
-streamlit
-groq
