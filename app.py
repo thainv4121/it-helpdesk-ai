@@ -100,12 +100,16 @@ CONTACT_HTML = f"""
 </div>
 """
 
-st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
-st.info("""
+st.markdown("""
+<div style="background:#fefce8; border:1px solid #fcd34d; border-radius:8px; 
+padding:6px 10px; font-size:11px; color:#92400e; line-height:1.4;">
 ⚠️ **Lưu ý:** Các thông tin được cung cấp bởi AI mang tính tham khảo. 
 Vui lòng kiểm tra lại trước khi thực hiện. 
 Chúng tôi không chịu trách nhiệm về bất kỳ sự cố nào phát sinh từ việc áp dụng thông tin này.
-""")
+</div>
+""", unsafe_allow_html=True)
+
+st.subheader("Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
 
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
 Hỗ trợ người dùng về: lỗi máy tính, Windows/Mac/Linux, mạng WiFi/VPN,
