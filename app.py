@@ -12,11 +12,6 @@ st.markdown("""
     [data-testid="stToolbar"] {display: none;}
     [data-testid="stDecoration"] {display: none;}
 
-    /* Nền trắng sáng */
-    .stApp {
-        background-color: #f8fafc;
-    }
-
     /* Khung chat */
     .block-container {
         padding: 1.2rem 1rem 0.5rem 1rem !important;
