@@ -103,9 +103,8 @@ CONTACT_HTML = f"""
 st.markdown("""
 <div style="background:#fefce8; border:1px solid #fcd34d; border-radius:8px; 
 padding:6px 10px; font-size:11px; color:#92400e; line-height:1.4;">
-⚠️ **Lưu ý:** Các thông tin được cung cấp bởi AI mang tính tham khảo. 
-Vui lòng kiểm tra lại trước khi thực hiện. 
-Chúng tôi không chịu trách nhiệm về bất kỳ sự cố nào phát sinh từ việc áp dụng thông tin này.
+⚠️ **Lưu ý:** Các thông tin được cung cấp bởi AI mang tính tham khảo.
+Chúng tôi không chịu trách nhiệm về bất kỳ sự cố nào phát sinh.
 </div>
 """, unsafe_allow_html=True)
 
