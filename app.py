@@ -52,7 +52,7 @@ CONTACT_HTML = f"""
 """
 
 st.title("🤖 KMT Helpdesk AI")
-st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT hôm nay?")
+st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT Helpdesk?")
 
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
 Hỗ trợ người dùng về: lỗi máy tính, Windows/Mac/Linux, mạng WiFi/VPN,
