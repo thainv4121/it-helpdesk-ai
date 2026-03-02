@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import Groq
 
-st.set_page_config(page_title="IT Helpdesk AI", page_icon="🤖", layout="centered")
+st.set_page_config(page_title="KMT Helpdesk AI", page_icon="🤖", layout="centered")
 
 st.markdown("""
 <style>
@@ -51,7 +51,7 @@ CONTACT_HTML = f"""
 </div>
 """
 
-st.title("🤖 IT Helpdesk AI")
+st.title("🤖 KMT Helpdesk AI")
 st.caption("Xin chào! Tôi có thể giúp gì cho bạn về IT hôm nay?")
 
 SYSTEM_PROMPT = """Bạn là chuyên gia IT Helpdesk với 10 năm kinh nghiệm.
@@ -69,7 +69,7 @@ for i, msg in enumerate(st.session_state.messages):
         if msg["role"] == "assistant":
             st.markdown(CONTACT_HTML, unsafe_allow_html=True)
 
-if prompt := st.chat_input("Nhập câu hỏi IT của bạn..."):
+if prompt := st.chat_input("Bạn cần hỗ trợ gì về vấn đề IT?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
